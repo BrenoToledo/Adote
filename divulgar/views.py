@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .models import Tag, Raca, Pet
+from django.contrib import messages
+from django.contrib.messages import constants
+from django.shortcuts import redirect
 
 # Create your views here.
 
@@ -49,4 +52,20 @@ def novo_pet(request):
 
         #TODO: Instalar mensagens
         messages.add_message(request, constants.SUCCESS, 'Novo pet cadastrado')
-        return render(request, 'novo_pet.html', {'tags': tags, 'racas': racas})
+        return redirect('/divulgar/seus_pets')
+
+@login_required
+def seus_pets(request):
+    if request.method == "GET":
+        pets = Pet.objects.filter(usuario=request.user)
+        return render(request, 'seus_pets.html', {'pets':pets})
+
+def remover_pet(request, id):
+    pet = pet.objects.get(id=id)
+    if not pet.usuario == request.user:
+        messages.add_message(request, constants.SUCCESS, 'Esse PET não é seu! espertinho KKKK  ')
+        return redirect('/divulgar/seus_pets')
+    pet.delete()
+
+    messages.add_message(request, constants.SUCCESS, 'Pet removido com sucesso!')
+    return redirect('/divulgar/seus_pets')
