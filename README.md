@@ -9,19 +9,19 @@ Esta aplicação tem como objetivo aprender e treinar conceitos da programação
 - Pesquisa.
 - Tabela com os resultados da pesquisa.
 - Tabela com os seus pets anunciados.
-- informações detalhadas sobre cada PET.
+- Informações detalhadas sobre cada PET.
 - Tela de aprovação das adoções.
 - Dashboard com os PETS que receberão mais solicitações.
 
 
 ## CONCEITOS TRABALHADOS
 
-- Controle de acesso
-- Filtro na consulta do banco de dados
-- CRUD dos PETS cadastrados
-- Upload de Mídia (Fotos) 
-- API retornando em Json 
-- Consumindo a API por um script JS
-- Grafico
-- Envio de Email ao ser aprovada a solicitação de adoção. 
+- Controle de acesso.
+- Filtro na consulta do banco de dados.
+- CRUD dos PETS cadastrados.
+- Upload de Mídia (Fotos).
+- API retornando em Json.
+- Consumindo a API por um script JS.
+- Grafico.
+- Envio de Email ao aprovar a solicitação de adoção. 
 
