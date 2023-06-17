@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Entrar na pasta projeto",
+            "type": "shell",
+            "command": "cd projetos"
+        },
+        {
+            "label": "Entrar na pasta projeto 01",
+            "type": "shell",
+            "command": "cd 'projeto 01'",
+        },
+
+        {
+            "label": "Virtual Enviriorment",
+            "type": "shell",
+            "command": "venv/scripts/activate"
+        }
+    ]
+}
